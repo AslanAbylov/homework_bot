@@ -1,8 +1,9 @@
 import logging
 from aiogram import executor
 from config import dp
-from hendlers import client, callback, extra, admin
+from hendlers import client, callback, extra, admin, fsmAdminMentor
 
+fsmAdminMentor.register_hundlers_FsmAdmin(dp)
 client.reqister_hendler_client(dp)
 admin.reqister_admin_hundlers(dp)
 callback.reqister_hundler_callback(dp)
